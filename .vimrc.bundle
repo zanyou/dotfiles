@@ -101,7 +101,10 @@ endif
   NeoBundle 'Shougo/neocomplcache'
 
   " neocomplcacheのsinpet補完
-  NeoBundle 'Shougo/neocomplcache-snippets-complete'
+  NeoBundle 'Shougo/neosnippet.git'
+
+  " various langueages snippets
+  NeoBundle 'honza/snipmate-snippets'
 
   " for rsense
   NeoBundle 'm2ym/rsense'
@@ -116,7 +119,8 @@ endif
 
 " Searching/Moving{{{
   " smooth_scroll.vim : スクロールを賢く
-  NeoBundle 'Smooth-Scroll'
+  " NeoBundle 'Smooth-Scroll'
+  NeoBundle 'yuroyoro/smooth_scroll'
 
   " vim-smartword : 単語移動がスマートな感じで
   NeoBundle 'smartword'
