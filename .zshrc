@@ -15,6 +15,7 @@ bindkey "^?" backward-delete-char
 
 # プロンプトが表示されるたびにプロンプト文字列を評価、置換する
 setopt prompt_subst
+setopt transient_rprompt
 
 ## Default shell configuration
 # colors enables us to idenfity color by $fg[red].
