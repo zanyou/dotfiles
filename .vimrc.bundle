@@ -142,6 +142,9 @@ endif
   " open-browser.vim : カーソルの下のURLを開くor単語を検索エンジンで検索
   NeoBundle 'tyru/open-browser.vim'
 
+  " VimからThe Silver Searcherを利用する
+  "  http://blog.glidenote.com/blog/2013/02/28/the-silver-searcher-better-than-ack/
+  NeoBundle 'rking/ag.vim'
 " }}}
 
 " Programming {{{
@@ -267,7 +270,7 @@ endif
   NeoBundle 'yuroyoro/vimdoc_ja'
 
   " vim上のtwitter client
-  NeoBundle 'TwitVim'
+  " NeoBundle 'TwitVim'
 
   " Lingrのclient
   NeoBundle 'tsukkee/lingr-vim'
