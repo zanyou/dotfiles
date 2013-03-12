@@ -8,6 +8,8 @@
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
+# oh-my-zsh export LESS=R
+unset LESS
 
 ## Backspace key
 #
