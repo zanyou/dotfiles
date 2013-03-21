@@ -304,6 +304,17 @@ function! g:my_preexec(cmdline, context)
   return a:cmdline
 endfunction
 
+function! VimShellCustomKeyMapping()
+  nnoremap <buffer> <C-j> <C-w>j
+  nnoremap <buffer> <C-k> <C-w>k
+  nnoremap <buffer> <C-l> <C-w>l
+  nnoremap <buffer> <C-h> <C-w>h
+  inoremap <buffer> <C-j> <C-w>j
+  inoremap <buffer> <C-k> <C-w>k
+  inoremap <buffer> <C-l> <C-w>l
+  inoremap <buffer> <C-h> <C-w>h
+endfunction
+
 autocmd FileType vimshell
 \ call vimshell#altercmd#define('g', 'git')
 \| call vimshell#altercmd#define('i', 'iexe')
@@ -314,7 +325,12 @@ autocmd FileType vimshell
 \| call vimshell#hook#set('preprompt', ['g:my_preprompt'])
 \| call vimshell#hook#set('preexec', ['g:my_preexec'])
 
+autocmd FileType vimshell call VimShellCustomKeyMapping()
+autocmd FileType int-rails call VimShellCustomKeyMapping()
 command! Vs :VimShell
+command! Vsrc :VimShellInteractive rails console
+nmap <Leader>pry :VimShellInteractive pry<CR>
+nmap <Leader>irb :VimShellInteractive irb<CR>
 
 
 "------------------------------------
