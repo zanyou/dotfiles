@@ -3,8 +3,10 @@
 
 require 'optparse'
 
+@hard = false
 opt_parser = OptionParser.new{|opts|
-  opts.banner = 'git switch [--repository=<path>] [--new-workdir=<path>] <branch> <command...>'
+  opts.banner = 'git switch [--hard] [--repository=<path>] [--new-workdir=<path>] <branch> <command...>'
+  opts.on("--hard",        'execute `git reset --hard` before switch to branch'){ @hard == true}
   opts.on("--repository",  "target repository.(default is current repository)"){|v| @repository = v}
   opts.on("--new-workdir", "path to the new working directory.(default /tmp/<repsitory_name>)"){|v| @new_work_dir = v}
 }
@@ -36,6 +38,11 @@ unless File.exists?(@new_work_dir)
   res = system("git-new-workdir #{@repository} #{@new_work_dir} ")
   exit 128 unless res
   puts "git-new-workdir #{@repository} #{@new_work_dir} "
+end
+
+if @hard
+  res = system("git reset --hard HEAD")
+  exit 128 unless res
 end
 
 Dir.chdir(@new_work_dir){
