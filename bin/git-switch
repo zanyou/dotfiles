@@ -7,8 +7,8 @@ require 'optparse'
 opt_parser = OptionParser.new{|opts|
   opts.banner = 'git switch [--hard] [--repository=<path>] [--new-workdir=<path>] <branch> <command...>'
   opts.on("--hard",        'execute `git reset --hard` before switch to branch'){ @hard == true}
-  opts.on("--repository",  "target repository.(default is current repository)"){|v| @repository = v}
-  opts.on("--new-workdir", "path to the new working directory.(default /tmp/<repsitory_name>)"){|v| @new_work_dir = v}
+  opts.on("--repository=V",  "target repository.(default is current repository)"){|v| @repository = v}
+  opts.on("--new-workdir=V", "path to the new working directory.(default /tmp/<repsitory_name>)"){|v| @new_work_dir = v}
 }
 
 args = ARGV.dup
