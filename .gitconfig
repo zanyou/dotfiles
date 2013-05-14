@@ -9,7 +9,7 @@
   interactive = auto
   grep = auto
 [push]
-  default = tracking       # defaultのpush先はtrackingしているリポジトリ
+  default = upstream # defaultのpush先はtrackingしているリポジトリ
 [core]
   excludesfile = ~/.gitignore  # globalな.gitignoreの指定
   autocrlf = input                 # CRLFを自動変換
@@ -99,6 +99,8 @@
   rhh3 = reset --hard HEAD~~~
   rhh4 = reset --hard HEAD~~~~
   rhh5 = reset --hard HEAD~~~~~
+  # git reset --hard HEAD を安全にした - 永遠に未完成 http://d.hatena.ne.jp/thinca/20120924/1348491052
+  cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
   # diff関連
   di = diff
   dm = diff master           # masterとのdiff
