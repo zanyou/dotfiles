@@ -297,6 +297,9 @@ endif
   " shows a git diff in the 'gutter' (sign column)
   NeoBundle 'airblade/vim-gitgutter'
 
+  " git-vim: Plugin files for calling git functions from inside Vim and Syntax files for git displays
+  NeoBundle 'motemen/git-vim'
+
 " }}}
 
 " ColorSchema{{{{
