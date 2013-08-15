@@ -181,6 +181,12 @@ endif
 
   " NERD_tree, taglist, srcexpl の統合
   " NeoBundle 'trinity.vim'
+
+  " GoLang
+  " GoのVimプラギンをNeoBundleで管理する - 四角革命前夜
+  " http://d.hatena.ne.jp/sasaplus1/20120708/1341720437
+  NeoBundle 'go', {'type' : 'nosync'}
+  NeoBundle 'gocode', {'type' : 'nosync'}
 " }}}
 "
 " Syntax {{{

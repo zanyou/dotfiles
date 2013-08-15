@@ -38,3 +38,7 @@ set helpfile=$VIMRUNTIME/doc/help.txt
 
 " ファイルタイプ判定をon
 filetype plugin on
+
+" GoLangのpluginをruntime pathへ
+set rtp+=$GOROOT/misc/vim
+exe "set rtp+=".globpath($GOPATH,  "src/github.com/nsf/gocode/vim")

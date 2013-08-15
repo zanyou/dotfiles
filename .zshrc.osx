@@ -98,15 +98,18 @@ alias perl='/opt/local/bin/perl'
 
 # Ruby
 # if [[ -s /Users/ozaki/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
-eval "$(rbenv init -)"
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/share/refe
 
 # Go Lang
-export GOROOT=$HOME/dev/go
+export GOROOT=/usr/local/go
 export GOOS=darwin
-export GOARCH=386
-export PATH=$PATH:$GOROOT/bin
+export GOARCH=amd64
+export CGO_ENABLED=1
+export GOPATH=$HOME/dev/GoLang
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # node.js
 export NODE_PATH=/usr/local/lib/node:$PATH
