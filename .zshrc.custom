@@ -133,11 +133,11 @@ case ${UID} in
       pushed="`_git_not_pushed`"
 
       st=`git status 2> /dev/null`
-      if [[ "$st" =~ "(?m)^nothing to" ]]; then
+      if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
         color=%F{green}
-      elif [[ "$st" =~ "(?m)^nothing added" ]]; then
+      elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
         color=%F{yellow}
-      elif [[ "$st" =~ "(?m)^# Untracked" ]]; then
+      elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
         color=%B%F{red}
       else
         color=%F{red}
@@ -145,9 +145,6 @@ case ${UID} in
 
       echo "[$color$name$action$pushed%f%b]"
     }
-
-    # PCRE 互換の正規表現を使う
-    setopt re_match_pcre
 
     RPROMPT='`rprompt-git-current-branch`${RESET}${WHITE}[${BLUE}%(5~,%-2~/.../%2~,%~)${WHITE}]${RESET}'
 

@@ -19,11 +19,11 @@ if [ -z "${SWITCH}" ]; then
 fi
 
 if [ -n "${PROXY}" -a -n "${PORT}" ]; then
-  networksetup -setsocksfirewallproxy ${NETWORK} ${PROXY} ${PORT}
+  networksetup -setsocksfirewallproxy "${NETWORK}" ${PROXY} ${PORT}
   echo "Network [${NETWORK}] : set socks proxy to '${PROXY}:${PORT}'"
 fi
 
-networksetup -setsocksfirewallproxystate ${NETWORK} ${SWITCH}
+networksetup -setsocksfirewallproxystate "${NETWORK}" ${SWITCH}
 if [ ${SWITCH} = "on" ]; then
   echo "Network [${NETWORK}] : socks proxy is enabled"
 else
