@@ -38,3 +38,7 @@ export NODE_PATH=$NODE_PATH:$(npm prefix -g 2>/dev/null)/lib/node_modules
 export PATH=$PATH:$(npm bin -g 2>/dev/null)
 
 
+# Go Lang
+export CGO_ENABLED=1
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:$(go env GOROOT)/bin:$GOPATH/bin
