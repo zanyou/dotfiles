@@ -89,7 +89,7 @@ export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/
 # export GOARCH=amd64
 export CGO_ENABLED=1
 export GOPATH=$HOME/dev/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$(go env GOROOT)/bin:$GOPATH/bin
 
 # node.js
 export NODE_PATH=/usr/local/lib/node:$PATH
