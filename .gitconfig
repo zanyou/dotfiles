@@ -177,4 +177,4 @@
   generic = ^B move-page-up
 [ruby]
 	gemfile = /home/ozaki/dev/asp_weborder/Gemfile
-  version = 2.0.0-p353
+  version = 2.1.1

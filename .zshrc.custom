@@ -679,6 +679,11 @@ linux*)
     ;;
 esac
 
+
+# ~/.zshrc
+# setting for percol
+source ~/.zsh/percol.zsh
+
 ## local固有設定
 #
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
