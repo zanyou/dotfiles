@@ -175,6 +175,6 @@
   generic = G move-last-line
   generic = ^F move-page-down
   generic = ^B move-page-up
-[ruby]
-	gemfile = /home/ozaki/dev/asp_weborder/Gemfile
-  version = 2.1.1
+
+[ghq]
+	root = /Users/ozaki/src
