@@ -4,8 +4,10 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 alias ls='ls -alh --color'
-alias vi='/usr/local/bin/vim'
-alias vim='/usr/local/bin/vim'
+if [ -f "/usr/local/bin/vim" ] ; then
+    alias vi='/usr/local/bin/vim'
+    alias vim='/usr/local/bin/vim'
+fi
 
 export PATH
 
@@ -26,7 +28,7 @@ export MAVEN_OPTS=-Xmx1024M
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null 2>&1 ; then eval "$(rbenv init -)"; fi
 
 export PATH=$PATH:$HOME/.gem/ruby/1.8/bin
 export PATH=/opt/firefox:$PATH
@@ -34,11 +36,15 @@ export PATH=/opt/firefox:$PATH
 export PATH=$PATH:$HOME/.cabal/bin
 
 # node
-export NODE_PATH=$NODE_PATH:$(npm prefix -g 2>/dev/null)/lib/node_modules
-export PATH=$PATH:$(npm bin -g 2>/dev/null)
+if which npm > /dev/null 2>&1  ; then
+    export NODE_PATH=$NODE_PATH:$(npm prefix -g 2>/dev/null)/lib/node_modules
+    export PATH=$PATH:$(npm bin -g 2>/dev/null)
+fi
 
 
 # Go Lang
-export CGO_ENABLED=1
-export GOPATH=$HOME/dev/go
-export PATH=$PATH:$(go env GOROOT)/bin:$GOPATH/bin
+if which go > /dev/null 2>&1  ; then
+    export CGO_ENABLED=1
+    export GOPATH=$HOME/dev/go
+    export PATH=$PATH:$(go env GOROOT)/bin:$GOPATH/bin
+fi

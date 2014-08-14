@@ -62,6 +62,8 @@ export AIR_HOME=~/dev/air
 export FLEX_HOME=~/dev/flex
 export PATH=$PATH:$AIR_HOME/bin:$FLEX_HOME/bin
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # Perl
 
@@ -79,7 +81,7 @@ export PATH=$PATH:$AIR_HOME/bin:$FLEX_HOME/bin
 # Ruby
 # if [[ -s /Users/ozaki/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null 2&>1 ; then eval "$(rbenv init -)"; fi
 
 export REFE_DATA_DIR=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/share/refe
 

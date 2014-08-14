@@ -37,11 +37,21 @@ command! Rv source $MYVIMRC
 
 set helpfile=$VIMRUNTIME/doc/help.txt
 
-" ファイルタイプ判定をon
-filetype plugin on
+
+" Some Linux distributions set filetype in /etc/vimrc.
+"   " Clear filetype flags before changing runtimepath to force Vim to
+"   reload them.
+if exists("g:did_load_filetypes")
+  filetype off
+  filetype plugin indent off
+endif
 
 " GoLangのpluginをruntime pathへ
 let goroot = substitute(system("go env GOROOT"),  '\n$',  '',  '')
 let govimpath = goroot . '/misc/vim'
 exe "set rtp+=" . govimpath
-exe "set rtp+=" . globpath($GOPATH,  "src/github.com/nsf/gocode/vim")
+" exe "set rtp+=" . globpath($GOPATH,  "src/github.com/nsf/gocode/vim")
+
+
+" ファイルタイプ判定をon
+filetype plugin on
