@@ -73,7 +73,7 @@ endif
   NeoBundle 'kana/vim-textobj-indent.git'
 
   " vim-textobj-function : 関数の中身をtext-objectに
-  NeoBundle 'kana/vim-textobj-function.git'
+  " NeoBundle 'kana/vim-textobj-function.git'
 
   " vim-textobj-fold : 折りたたまれたアレをtext-objectに
   " NeoBundle 'kana/vim-textobj-fold.git'
@@ -214,6 +214,9 @@ endif
 
   " ghc-mod
   NeoBundle 'eagletmt/ghcmod-vim'
+
+  " jsx
+  NeoBundle 'mxw/vim-jsx'
 
   " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
   NeoBundle 'scrooloose/syntastic'
