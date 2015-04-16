@@ -42,6 +42,8 @@ alias less='less -r'
 # grep
 alias 'gr'='grep --color=auto -ERUIn'
 
+alias -g TEE="2>&1 | tee"
+
 #make
 alias 'm'='make'
 alias 'mn'='make native-code'
@@ -82,12 +84,14 @@ alias gc='git commit'
 alias gci='git commit -a'
 alias '偽ｔ'=git
 
+# jq
+alias -g JQ='jq "."'
+
 alias java='nocorrect java'
 alias cp='nocorrect cp -irp'
 alias erl='nocorrect erl'
 alias sbcl='nocorrect sbcl'
 alias gosh='nocorrect gosh'
-alias node='nocorrect node'
 # alias hg='nocorrect hg --encoding=utf-8'
 
 # scala
