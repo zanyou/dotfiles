@@ -189,7 +189,8 @@ endif
   NeoBundle 'haml.zip'
 
   " JavaScript
-  NeoBundle 'JavaScript-syntax'
+  " NeoBundle 'JavaScript-syntax'
+  NeoBundle 'pangloss/vim-javascript'
 
   " jQuery
   NeoBundle 'jQuery'

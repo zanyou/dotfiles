@@ -94,7 +94,8 @@ export GOPATH=$HOME
 export PATH=$PATH:$(go env GOROOT)/bin:$GOPATH/bin
 
 # node.js
-export NODE_PATH=$PATH:/usr/local/lib/node_modules
+# export NODE_PATH=$PATH:/usr/local/lib/node_modules
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # tmux
 alias tmux='tmuxx'
