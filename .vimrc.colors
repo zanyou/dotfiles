@@ -35,8 +35,13 @@ hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg
 " hi PmenuSbar ctermbg=0 ctermfg=9
 " hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
 
+" Highlight the 'error'
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
+
+autocmd FileType javascript :highlight jsColonAtTail  cterm=underline ctermfg=lightblue guibg=darkgray
+autocmd FileType javascript :match jsColonAtTail /:$/
+
 
 " vimdiffの色設定
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22

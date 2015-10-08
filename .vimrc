@@ -32,3 +32,4 @@ source ~/dotfiles/.vimrc.plugins_setting
 "  http://deris.hatenablog.jp/entry/2013/05/10/003430
 " source ~/dotfiles/.vimrc.gitlogviewer
 
+
