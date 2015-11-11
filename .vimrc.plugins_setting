@@ -392,6 +392,11 @@ if $GOPATH != ''
   let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 endif
 
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+
+
 "------------------------------------
 " toggle.vim
 "------------------------------------
