@@ -227,6 +227,10 @@ endif
 
   " Elixir
   NeoBundle 'elixir-lang/vim-elixir'
+
+  " Go (golang) support for Vim (enhanced bundled vim)
+  NeoBundle 'fatih/vim-go'
+
 " }}}
 
 " Buffer {{{

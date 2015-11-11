@@ -48,11 +48,6 @@ endif
 
 " GoLangのpluginをruntime pathへ
 let goroot = substitute(system("go env GOROOT"),  '\n$',  '',  '')
-let govimpath = goroot . '/misc/vim'
-exe "set rtp+=" . govimpath
-set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
-" exe "set rtp+=" . globpath($GOPATH,  "src/github.com/nsf/gocode/vim")
-
 
 " ファイルタイプ判定をon
 filetype plugin on
