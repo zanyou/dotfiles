@@ -238,7 +238,8 @@ endif
   NeoBundle 'DumbBuf'
 
   " minibufexpl.vim : タブエディタ風にバッファ管理ウィンドウを表示
-  NeoBundle 'minibufexpl.vim'
+  " NeoBundle 'minibufexpl.vim'
+  NeoBundle 'fholgado/minibufexpl.vim'
 
   " NERDTree : ツリー型エクスプローラ
   NeoBundle 'The-NERD-tree'
@@ -312,6 +313,10 @@ endif
   " git-vim: Plugin files for calling git functions from inside Vim and Syntax files for git displays
   NeoBundle 'motemen/git-vim'
 
+  " Create your own submodes
+  " 任意キーでサブモードを作れる
+  " http://d.hatena.ne.jp/thinca/20130131/1359567419
+  NeoBundle 'kana/vim-submode'
 " }}}
 
 " ColorSchema{{{{
