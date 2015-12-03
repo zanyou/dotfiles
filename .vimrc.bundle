@@ -176,6 +176,9 @@ endif
   " エラーがある場所をhilight
   NeoBundle 'errormarker.vim'
 
+  " GOPATHから検索
+  NeoBundle 'koron/vim-gosrc'
+
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
   " NeoBundle 'Source-Explorer-srcexpl.vim'
 
