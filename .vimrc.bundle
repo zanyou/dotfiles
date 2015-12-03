@@ -102,6 +102,7 @@ endif
 
   " neocomplcacheのsinpet補完
   NeoBundle 'Shougo/neosnippet.git'
+  NeoBundle "Shougo/neosnippet-snippets"
 
   " various langueages snippets
   NeoBundle 'honza/vim-snippets'
@@ -340,6 +341,7 @@ endif
   NeoBundle 'thinca/vim-unite-history'
   NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'choplin/unite-vim_hacks'
+  NeoBundle 'Shougo/neomru.vim'
 
 " }}}
 "
