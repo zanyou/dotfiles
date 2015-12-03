@@ -180,3 +180,5 @@
 
 [ghq]
 	root = /Users/ozaki/src
+[rerere]
+	enabled = true
