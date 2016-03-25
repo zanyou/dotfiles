@@ -2,11 +2,8 @@
 
 filetype off
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
-endif
-
+set runtimepath^=~/.vim/bundle/neobundle.vim/
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " set rtp+=~/.vim/bundle/vundle/
 " call vundle#rc()
@@ -264,8 +261,9 @@ endif
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
       \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
+      \     'mac' : 'make',
+      \     'linux' : 'make',
+      \     'unix' : 'make',
       \    },
       \ }
 
@@ -346,5 +344,7 @@ endif
 " }}}
 "
 " NeoBundle 'gmarik/vundle'
+
+call neobundle#end()
 
 filetype plugin indent on
