@@ -34,6 +34,7 @@ export PATH=$PATH:$HOME/.gem/ruby/1.8/bin
 export PATH=/opt/firefox:$PATH
 
 export PATH=$PATH:$HOME/.cabal/bin
+export RUBYGEMS_GEMDEPS=-
 
 # node
 if which npm > /dev/null 2>&1  ; then
