@@ -9,7 +9,7 @@
   interactive = auto
   grep = auto
 [push]
-  default = upstream # defaultのpush先はtrackingしているリポジトリ
+	default = current
 [core]
   excludesfile = ~/.gitignore  # globalな.gitignoreの指定
   autocrlf = input                 # CRLFを自動変換
@@ -182,3 +182,7 @@
 	root = /Users/ozaki/src
 [rerere]
 	enabled = true
+[mergetool]
+	keepBackup = false
+[ruby]
+	version = 2.2.4
