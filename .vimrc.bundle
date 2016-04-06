@@ -232,6 +232,10 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " Go (golang) support for Vim (enhanced bundled vim)
   NeoBundle 'fatih/vim-go'
 
+  " vim-json
+  " http://qiita.com/karur4n/items/a26007236c59c5fb8735
+  NeoBundle 'elzr/vim-json'
+
 " }}}
 
 " Buffer {{{
