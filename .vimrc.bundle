@@ -61,7 +61,9 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'kana/vim-textobj-syntax.git'
 
   " vim-textobj-plugins : いろんなものをtext-objectにする
-  NeoBundle 'thinca/vim-textobj-plugins.git'
+  " obsolated
+  "NeoBundle 'thinca/vim-textobj-plugins.git'
+  NeoBundle "thinca/vim-textobj-function-javascript"
 
   " vim-textobj-lastpat : 最後に検索されたパターンをtext-objectに
   NeoBundle 'kana/vim-textobj-lastpat.git'
