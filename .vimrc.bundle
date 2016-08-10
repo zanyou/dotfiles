@@ -325,6 +325,11 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " 任意キーでサブモードを作れる
   " http://d.hatena.ne.jp/thinca/20130131/1359567419
   NeoBundle 'kana/vim-submode'
+
+  " local_vimrc の焼き直し localrc.vim 書いた - 永遠に未完成
+  " http://thinca.hatenablog.com/entry/20110108/1294427418
+  NeoBundle 'thinca/vim-localrc'
+
 " }}}
 
 " ColorSchema{{{{
