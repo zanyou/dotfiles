@@ -380,6 +380,7 @@ let g:syntastic_enable_highlighting = 1
 " 自動的に開いたり閉じたりする
 let g:syntastic_auto_loc_list=1
 
+let g:syntastic_aggregate_errors = 1
 " https://github.com/scrooloose/syntastic/wiki/JavaScript:---jsxhint
 " require: npm install -g eslint
 let g:syntastic_javascript_checker = 'eslint' "eshintを使う
@@ -390,7 +391,9 @@ if $GOPATH != ''
   " golintの実行パスを追加
   execute "set rtp+=".globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
   " syntastic設定
-  let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+  let g:syntastic_go_checkers = ['go',  'golint',  'govet']
+  " let g:syntastic_go_checkers = ['gometalinter']
+  " let g:syntastic_go_gometalinter_args = '--deadline=5s'
 endif
 
 let g:syntastic_mode_map = { 'mode': 'passive',
@@ -459,6 +462,7 @@ set completeopt=menu,preview
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
+let g:go_list_type = "quickfix"
 
 "------------------------------------
 " mxw/vim-jsx
