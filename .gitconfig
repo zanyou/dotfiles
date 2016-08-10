@@ -169,6 +169,7 @@
   fhf = flow hotfix finish
   fhp = flow hotfix publish
   fs  = flow support
+  fhd = "!f() { git branch | grep hotfix | xargs git branch -D ;}; f"
 
   fizzbuzz = "!f() { seq "$@" | awk '$0=NR%15?NR%5?NR%3?$0:\"Fizz\":\"Buzz\":\"FizzBuzz\"' ;}; f"
 
