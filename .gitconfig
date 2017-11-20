@@ -15,9 +15,7 @@
   autocrlf = input                 # CRLFを自動変換
   editor = vim
   quotepath = false
-[merge]
-  tool = vimdiff
-  ff = false
+[merge] tool = vimdiff ff = false
 [diff]
   tool=vimdiff
 [branch]
