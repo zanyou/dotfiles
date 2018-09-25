@@ -74,8 +74,8 @@ source ~/.config/nvim/plugins/vim-surround.rc.vim
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'source ~/.config/nvim/plugins/deoplete.rc.vim'
 
-[[plugins]]
-repo = 'cohama/lexima.vim'
+# [[plugins]]
+# repo = 'cohama/lexima.vim'
 
 # ==========================================================
 # filter

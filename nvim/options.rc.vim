@@ -13,6 +13,7 @@ set notitle                   " 'Thanks for Flying Vim'
 set noundofile                " avoid creating a undo file
 set clipboard=unnamed         " put the yanked string into unnamed buffer(as system clipboard)
 set wildmode=list:full        " command-line completion, list all matches and complete first match
+set completeopt+=noinsert     " auto select first completion element
 
 " ensure cache dir
 let $VIMTMP = expand('~/.cache/vim')
