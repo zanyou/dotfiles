@@ -14,6 +14,8 @@ set noundofile                " avoid creating a undo file
 set clipboard=unnamed         " put the yanked string into unnamed buffer(as system clipboard)
 set wildmode=list:full        " command-line completion, list all matches and complete first match
 set completeopt+=noinsert     " auto select first completion element
+set autowrite                 " write files on fire :tag, ;make and other commands
+set hlsearch                  " highlight matches
 
 " ensure cache dir
 let $VIMTMP = expand('~/.cache/vim')
@@ -34,7 +36,6 @@ set cindent      " enables automatic C program indenting
 set tabstop=2 shiftwidth=2 softtabstop=0
 
 filetype plugin indent on
-syntax enable
 
 "-------------------------------------------------------------------------------
 " Apperance
@@ -55,6 +56,11 @@ match ZenkakuSpace /　/
 "-------------------------------------------------------------------------------
 
 set termguicolors " 256 color
+if &term == 'screen-256color'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+syntax enable
 
 " Highlight the go 'error'
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214

@@ -4,7 +4,6 @@
 
 set completeopt-=preview
 
-
 " syntax highlighting setteings
 let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
