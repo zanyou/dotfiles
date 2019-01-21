@@ -36,6 +36,10 @@ depends = ['airline.vim']
 repo = 'jonathanfilip/vim-lucius'
 hook_post_source = 'source ~/.config/nvim/plugins/lucius.rc.vim'
 
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = 'source ~/.config/nvim/plugins/indent-guides.rc.vim'
+
 # ==========================================================
 # moving
 # ==========================================================
