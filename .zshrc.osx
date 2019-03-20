@@ -41,3 +41,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # tmux
 alias tma='tmux attach'
 alias tml='tmux list-window'
+
+# avr-gcc for qmk firmware build
+export PATH="/usr/local/opt/avr-gcc@7/bin:$PATH"
+
