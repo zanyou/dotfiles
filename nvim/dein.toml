@@ -69,6 +69,9 @@ hook_add = '''
 source ~/.config/nvim/plugins/vim-surround.rc.vim
 '''
 
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+
 # ==========================================================
 # completion
 # ==========================================================
@@ -84,6 +87,7 @@ if = '!has("nvim")'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'source ~/.config/nvim/plugins/deoplete.rc.vim'
+rev = "4.1"
 
 # [[plugins]]
 # repo = 'cohama/lexima.vim'
@@ -107,6 +111,7 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/denite.nvim'
 depends = ['neomru.vim']
 hook_add = 'source ~/.config/nvim/plugins/denite.rc.vim'
+rev = "1.2"
 
 # fastest matcher
 [[plugins]]
