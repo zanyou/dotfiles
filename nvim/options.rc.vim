@@ -17,6 +17,7 @@ set completeopt+=noinsert     " auto select first completion element
 set autowrite                 " write files on fire :tag, ;make and other commands
 set hlsearch                  " highlight matches
 
+set backspace=indent,eol,start
 " ensure cache dir
 let $VIMTMP = expand('~/.cache/vim')
 
