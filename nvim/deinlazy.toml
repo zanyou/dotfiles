@@ -32,3 +32,13 @@ on_ft = 'ruby'
 [[plugins]]
 repo = 'rhysd/vim-crystal'
 on_ft = 'crystal'
+
+# TypeScript
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = 'typescript'
