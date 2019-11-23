@@ -1,6 +1,6 @@
 [user]
-  name = Tomohito Ozaki
-  email = ozaki@yuroyoro.com
+  name = Kentaro Horio
+  email = stylencrypto@gmail.com
 [color]
   # colorの設定(以下のコマンドは自動で色つける)
   status = auto
@@ -182,7 +182,7 @@
   generic = <Ctrl-B> move-page-up
 
 [ghq]
-	root = /Users/ozaki/src
+	root = /Users/albari/src
 [rerere]
 	enabled = true
 [mergetool]
