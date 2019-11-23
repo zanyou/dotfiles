@@ -4,6 +4,7 @@ DOT_FILES=( .zsh .zshrc .zshrc.custom .zshrc.alias .zshrc.linux .zshrc.osx .ctag
 
 for file in ${DOT_FILES[@]}
 do
+    rm -rf $HOME/$file
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
 
